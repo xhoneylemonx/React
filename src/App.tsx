@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import CourseInput from "./components/CourseInput";
 import CourseList from "./components/CourseList";
-import './App.css'
-import React from 'react'
+import './App.css';
+
 type Course = {
   name: string;
   grade: string;
@@ -26,12 +26,12 @@ function App() {
 
   const calculateGPA = () => {
     if (courses.length === 0) return;
-    const total = courses.reduce((sum, c) => sum + gradeToPoint[c.grade], 0);
+    const total = courses.reduce((sum: number, c: Course) => sum + gradeToPoint[c.grade], 0);
     setGpa(total / courses.length);
   };
 
   return (
-    <div >
+    <div>
       <h1>ระบบรายชื่อวิชาและคำนวณ GPA</h1>
 
       <CourseInput onAddCourse={addCourse} />
