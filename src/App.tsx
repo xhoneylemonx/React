@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CourseInput from "./components/CourseInput";
 import CourseList from "./components/CourseList";
+import './App.css'
 
 type Course = {
   name: string;
