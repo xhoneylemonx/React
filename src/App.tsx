@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from "react";
 import CourseInput from "./components/CourseInput";
 import CourseList from "./components/CourseList";
 import './App.css'
-
+import React from 'react'
 type Course = {
   name: string;
   grade: string;
